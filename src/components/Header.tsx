@@ -41,7 +41,7 @@ class Header extends React.Component<Props> {
         <AppBar position="absolute" className={classes.navbar}>
           <Toolbar variant="dense">
             <div className={classes.logoContainer}>
-              <img src="./logo_beta.svg" className={classes.logo} />
+              <img src="./logo.svg" className={classes.logo} />
             </div>
           </Toolbar>
         </AppBar>

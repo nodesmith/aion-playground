@@ -3,11 +3,9 @@ import { action, observable } from 'mobx';
 import * as $ from 'jquery';
 
 export const NETWORK_UI_NAMES: { [key:string]: string } = {
-  mainnet: 'Ethereum Mainnet',
-  kovan: 'Kovan - Ethereum Testnet',
-  rinkeby: 'Rinkeby - Ethereum Testnet',
-  ropsten: 'Ropsten - Ethereum Testnet',
-  goerli: 'Goerli - Ethereum Testnet',
+  mainnet: 'Aion Mainnet',
+  mastery: 'Mastery Testnet',
+  avmtestnet: 'AVM Testnet',
 };
 
 // Key is name of the example call, i.e. eth_getBlockNumber
@@ -18,7 +16,7 @@ export type ExampleCallMap = { [key:string]: string };
 export type NetworkExamplesMap = { [key:string]: ExampleCallMap };
 
 // Special rate limited key for demo purposes only - get your own full access key at https://beta.dashboard.nodesmith.io
-const API_KEY = '7636d5cb49914f62b4e106bae02b9e25';
+const API_KEY = 'b1bfb52d69294be79530dbda0e5e9e7c';
 
 export default class AppState {
   constructor() {
@@ -65,7 +63,7 @@ export default class AppState {
    */
   @action public sendQuery = async (requestBody: string, network: string) => {
     this.changeIsSendingRequest(true);
-    const endpoint = `https://ethereum.api.nodesmith.io/v1/${network}/jsonrpc?apiKey=${API_KEY}`;
+    const endpoint = `https://aion.api.nodesmith.io/v1/${network}/jsonrpc?apiKey=${API_KEY}`;
 
     const response = await fetch(endpoint, {
       method: 'POST',

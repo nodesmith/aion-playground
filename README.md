@@ -1,8 +1,8 @@
-# Nodesmith API Playground
+# Aion-Playground
 
-The API Playground allows users to try out Nodesmith APIs in their browser.
+The Aion Playground allows users to interact with the Aion network in their browser.  Users can send compliant JSON-RPC API requests to varios Aion public networks.
 
-The Playground is linked to from the Nodesmith documentation.
+This tool is useful for early prototype and hackathons - allowing you to quickly test out API calls without having to do any sort of configuration.
 
 This project contains Typescript and React code.  We also use [https://mobx.js.org/getting-started.html](https://mobx.js.org/getting-started.html) for state management.
 
